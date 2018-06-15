@@ -22,7 +22,7 @@ const Cabecalho = props => {
                     <div className='collapse navbar-collapse' id='myNavbar'>
                         <ul className='nav navbar-nav navbar-right'>
                             <li><Link to='/'>INICIO</Link></li>
-                            <li><Link to='/servicos'>SERVICOS</Link></li>
+                            <li><Link to='/login'>LOGIN</Link></li>
                             <li><Link to='/portfolio'>ESTACIONAMENTOS</Link></li>
                             <li><Link to='/precos'>PRECOS</Link></li>
                             <li><Link to='/contato'>CONTATO</Link></li>

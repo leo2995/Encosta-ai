@@ -7,33 +7,56 @@ class AdminPortfolio extends Component {
         super(props)
 
         this.gravaPortfolio = this.gravaPortfolio.bind(this)
+
+
     }
 
-    gravaPortfolio(){
+    gravaPortfolio() {
 
-        const generalData={
-            address: this.address.value,
-            complement: this.complement.value
+        const dataParking = {
+            enptySpots: this.enptySpots.value,
+            latitude: this.latitude.value,
+            longitude: this.longitude.value,
+            name: this.name.value,
+            spaceQnt: this.spaceQnt.value
         }
+        //console.log(streetParking)
 
-        config.push('generalData',{
-            data: generalData
+        config.push('privateParking', {
+            data: dataParking
+
         })
+
     }
 
     render() {
         return (
             <div style={{ padding: '120px' }}>
-                <h2> Painel Administrativo</h2>
+                <h2>Adicionar Estacionamento Privado</h2>
                 <form onSubmit={this.gravaPortfolio}>
                     <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
-                        <input type="text" className="form-control" id="address" placeholder="Endereco" ref={(ref)=> this.address= ref }/>
+                        <label htmlFor="exampleInputEmail1">Nome</label>
+                        <input type="text" className="form-control" id="name" placeholder="Nome" ref={(ref) => this.name = ref} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Descricao</label>
-                        <textarea className="form-control" id="complement" rows="3" ref={(ref)=> this.complement= ref }></textarea >
+                        <label htmlFor="exampleInputEmail1">Vagas</label>
+                        <input type="text" className="form-control" id="enptySpots" placeholder="Vagas" ref={(ref) => this.enptySpots = ref} />
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Longitude</label>
+                        <input type="text" className="form-control" id="longitude" placeholder="Longitude" ref={(ref) => this.longitude = ref} />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Latitude</label>
+                        <input type="text" className="form-control" id="latitude" placeholder="Latitude" ref={(ref) => this.latitude = ref} />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="exampleInputPassword1">VagasTotais</label>
+                        <input type="text" className="form-control" id="spaceQnt" placeholder="VagasTotais" ref={(ref) => this.spaceQnt = ref} />
+                    </div>
+
                     <button type="submit" className="btn btn-primary">Salvar</button>
                 </form>
             </div>
