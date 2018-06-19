@@ -26,7 +26,6 @@ class Portfolio extends Component {
             asArray: false
         })
 
-
     }
 
     render() {
@@ -47,9 +46,7 @@ class Portfolio extends Component {
                         }
 
 
-
                     </div> <br />
-
 
                     <h2>Estacionamentos Publicos</h2> <br />
 
@@ -63,7 +60,7 @@ class Portfolio extends Component {
 
                     </div>
 
-                   
+
                 </div >
 
             </div>
