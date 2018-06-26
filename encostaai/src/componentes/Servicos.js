@@ -3,8 +3,6 @@ import React from 'react';
 const Servicos = props =>{
     return(
         
-
-
             <div id='services' className='container-fluid text-center'>
                 
 
