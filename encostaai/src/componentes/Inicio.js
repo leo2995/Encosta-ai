@@ -1,4 +1,6 @@
 import React from 'react';
+import Maps from './Maps'
+
 
 const Inicio = props => {
     return (
@@ -30,6 +32,10 @@ const Inicio = props => {
                     </div>
                 </div>
             </div>
+            <div>
+                <Maps/>
+            </div>
+            
 
         </div>
     )
