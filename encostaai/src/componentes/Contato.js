@@ -23,8 +23,8 @@ const Contato = props=>{
                     </div>
                     <textarea className='form-control' id='comments' name='comments' placeholder='Comentario' rows='5'></textarea><br />
                     <div className='row'>
-                        <div classNameName='col-sm-12 form-group'>
-                            <button classNameName='btn btn-default pull-right' type='submit'>Enviar</button>
+                        <div className='col-sm-12 form-group'>
+                            <button className='btn btn-default pull-right' type='submit'>Enviar</button>
                         </div>
                     </div>
                 </div>

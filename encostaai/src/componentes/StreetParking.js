@@ -10,8 +10,19 @@ const StreetParkink = props=>{
             <p><label>Avaliações:</label> <strong>{props.conteudoPublico.rating}</strong></p>
             <p><strong>{props.conteudoPublico.name}</strong></p>
             <p><label>Vagas Totais:</label> <strong>{props.conteudoPublico.spaceQnt}</strong></p>
-            <p><input type="button" value="Ocupar vaga" /></p>
-            <p><input type="button" value="Desocupar vaga" /></p>
+            <p><input type="button" value="Ocupar vaga" onClick={
+                function () {
+                    if (props.conteudoPublico.enptySpots > 0)
+                        props.conteudoPublico.enptySpots = props.conteudoPublico.enptySpots - 1;
+                }
+            }/></p>
+            <p><input type="button" value="Desocupar vaga" onClick={
+                function () {
+                    if (props.conteudoPublico.enptySpots < props.conteudoPublico.spaceQnt) {
+                        props.conteudoPublico.enptySpots = props.conteudoPublico.enptySpots + 1;
+                    }
+                }
+            }/></p>
 
         </div>
     </div>

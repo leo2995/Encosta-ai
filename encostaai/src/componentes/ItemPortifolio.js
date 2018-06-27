@@ -10,8 +10,19 @@ const ItemPortfolio = props => {
                 <p><label>Avaliações:</label> <strong>{props.conteudo.rating}</strong></p>
                 <p><strong>{props.conteudo.name}</strong></p>
                 <p><label>Vagas Totais:</label> <strong>{props.conteudo.spaceQnt}</strong></p>
-                <p><input type="button" value="Ocupar vaga" /></p>
-                <p><input type="button" value="Desocupar vaga" /></p>
+                <p><input type="button" value="Ocupar vaga" onClick={
+                    function () {
+                        if (props.conteudo.enptySpots > 0)
+                            props.conteudo.enptySpots = props.conteudo.enptySpots - 1;
+                    }
+                }/></p>
+                <p><input type="button" value="Desocupar vaga" onClick={
+                    function () {
+                        if (props.conteudo.enptySpots < props.conteudo.spaceQnt) {
+                            props.conteudo.enptySpots = props.conteudo.enptySpots + 1;
+                        }
+                    }
+                }/></p>
 
             </div>
         </div>
