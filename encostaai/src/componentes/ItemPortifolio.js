@@ -10,6 +10,8 @@ const ItemPortfolio = props => {
                 <p><label>Avaliações:</label> <strong>{props.conteudo.rating}</strong></p>
                 <p><strong>{props.conteudo.name}</strong></p>
                 <p><label>Vagas Totais:</label> <strong>{props.conteudo.spaceQnt}</strong></p>
+                <p><input type="button" value="Ocupar vaga" /></p>
+                <p><input type="button" value="Desocupar vaga" /></p>
 
             </div>
         </div>
