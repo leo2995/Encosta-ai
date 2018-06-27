@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import config from '../firebase-Config';
 
 
@@ -14,7 +14,7 @@ class AdminPortfolio extends Component {
     gravaPortfolio() {
 
         const dataParking = {
-            enptySpots: this.enptySpots.value,
+            emptySpots: this.emptySpots.value,
             latitude: this.latitude.value,
             longitude: this.longitude.value,
             name: this.name.value,
@@ -40,7 +40,8 @@ class AdminPortfolio extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Vagas</label>
-                        <input type="text" className="form-control" id="enptySpots" placeholder="Vagas" ref={(ref) => this.enptySpots = ref} />
+                        <input type="text" className="form-control" id="emptySpots" placeholder="Vagas"
+                               ref={(ref) => this.emptySpots = ref}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Longitude</label>
