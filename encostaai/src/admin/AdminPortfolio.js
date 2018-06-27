@@ -18,8 +18,9 @@ class AdminPortfolio extends Component {
             latitude: this.latitude.value,
             longitude: this.longitude.value,
             name: this.name.value,
-            spaceQnt: this.spaceQnt.value
-        }
+            spaceQnt: this.spaceQnt.value,
+            rating: "0"
+        };
         //console.log(streetParking)
 
         config.push('privateParking', {
