@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 
 import {auth} from './../firebase-Config'
@@ -46,7 +46,7 @@ class Login extends Component {
                         <label htmlFor="exampleInputEmail1">Email</label>
                         <input type="email" name="email" ref={ref => this.email = ref}className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nome@email" />
                     </div>
-                    <div class="form-group">
+                <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Password</label>
                         <input type="password" name="senha" ref={ref=> this.senha = ref} className="form-control" id="exampleInputPassword1" />
                        
