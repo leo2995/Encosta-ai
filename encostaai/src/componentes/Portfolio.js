@@ -3,7 +3,6 @@ import config from './../firebase-Config'
 import ItemPortfolio from './ItemPortifolio';
 import StreetParking from './StreetParking';
 
-
 class Portfolio extends Component {
     constructor(props) {
         super(props)
