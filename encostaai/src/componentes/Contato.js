@@ -8,9 +8,9 @@ const Contato = props=>{
             <div className='row'>
                 <div className='col-sm-5'>
                     <p>Você pode entrar em contato 24 horas por dia 7 dias por semana.</p>
-                    <p><span className='glyphicon glyphicon-map-marker'></span> Recife, PE</p>
-                    <p><span className='glyphicon glyphicon-phone'></span> +55 81 9999-6666</p>
-                    <p><span className='glyphicon glyphicon-envelope'></span> contato@encostai.com</p>
+                    <p><span className='glyphicon glyphicon-map-marker'/> Recife, PE</p>
+                    <p><span className='glyphicon glyphicon-phone'/> +55 81 9999-6666</p>
+                    <p><span className='glyphicon glyphicon-envelope'/> contato@encostai.com</p>
                 </div>
                 <div className='col-sm-7 '>
                     <div className='row'>
@@ -21,7 +21,7 @@ const Contato = props=>{
                             <input className='form-control' id='email' name='email' placeholder='Email' type='email' required />
                         </div>
                     </div>
-                    <textarea className='form-control' id='comments' name='comments' placeholder='Comentario' rows='5'></textarea><br />
+                    <textarea className='form-control' id='comments' name='comments' placeholder='Comentario' rows='5'/><br/>
                     <div className='row'>
                         <div className='col-sm-12 form-group'>
                             <button className='btn btn-default pull-right' type='submit'>Enviar</button>

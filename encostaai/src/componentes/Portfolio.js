@@ -41,8 +41,10 @@ class Portfolio extends Component {
                         {
                             Object.keys(this.state.privateParking)
                                 .map(key => {
-                                    return <ItemPortfolio key={key} conteudo={this.state.privateParking[key]} />
+                                    return <ItemPortfolio key={key} chave={key} conteudo={this.state.privateParking[key]} />
                                 })
+
+                                
                         }
 
 

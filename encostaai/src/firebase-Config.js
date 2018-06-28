@@ -1,6 +1,7 @@
 const Rebase = require('re-base')
 const firebase = require('firebase')
 
+
 const Firebaseconfig = {
     apiKey: "AIzaSyBf23dbJGUtT0aXHveUhTXqY-7gu6URHfw",
     authDomain: "encostaai-c2d9d.firebaseapp.com",
@@ -10,9 +11,15 @@ const Firebaseconfig = {
     messagingSenderId: "357875355548"
   }
 
+  
   const app = firebase.initializeApp(Firebaseconfig)
+  
+  export const database = firebase.database();
+
   const config = Rebase.createClass(app.database()) 
 
   export const auth = app.auth();
+  
+
 
   export default config

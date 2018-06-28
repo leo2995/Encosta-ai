@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import config from '../firebase-Config';
 
 
@@ -17,8 +17,9 @@ class AdminPublicParking extends Component {
             longitude2 : this.longitude2.value,
             name : this.name.value,
             probability : this.probability.value,
-            spaceQnt : this.spaceQnt.value
-        }
+            spaceQnt: this.spaceQnt.value,
+            rating: "0"
+        };
 
         config.push('streetParking', {
             data: publicParking
