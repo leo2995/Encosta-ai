@@ -6,20 +6,20 @@ const ItemPortfolio = props => {
             <div className='thumbnail'>
                 <img src='paris.jpg' alt='' width='400' height='300' />
                 <h4>Estacionamento Privado</h4>
-                <p> <label>Vagas Diponiveis:</label> <strong>{props.conteudo.enptySpots}</strong></p>
+                <p><label>Vagas Diponiveis:</label> <strong>{props.conteudo.emptySpots}</strong></p>
                 <p><label>Avaliações:</label> <strong>{props.conteudo.rating}</strong></p>
                 <p><strong>{props.conteudo.name}</strong></p>
                 <p><label>Vagas Totais:</label> <strong>{props.conteudo.spaceQnt}</strong></p>
                 <p><input type="button" value="Ocupar vaga" onClick={
                     function () {
-                        if (props.conteudo.enptySpots > 0)
-                            props.conteudo.enptySpots = props.conteudo.enptySpots - 1;
+                        if (props.conteudo.emptySpots > 0)
+                            props.conteudo.emptySpots = props.conteudo.emptySpots - 1;
                     }
                 }/></p>
                 <p><input type="button" value="Desocupar vaga" onClick={
                     function () {
-                        if (props.conteudo.enptySpots < props.conteudo.spaceQnt) {
-                            props.conteudo.enptySpots = props.conteudo.enptySpots + 1;
+                        if (props.conteudo.emptySpots < props.conteudo.spaceQnt) {
+                            props.conteudo.emptySpots = props.conteudo.emptySpots + 1;
                         }
                     }
                 }/></p>
