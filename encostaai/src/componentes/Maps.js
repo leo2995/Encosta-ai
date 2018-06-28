@@ -3,7 +3,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 
 import config from './../firebase-Config'
 
-const MyMapComponent = withScriptjs(withGoogleMap(({ privateParking, isMarkerShown }) => {
+const MyMapComponent = withScriptjs(withGoogleMap(({ privateParking, streetParking, isMarkerShown }) => {
     return (
         <GoogleMap
             defaultZoom={8}
@@ -13,6 +13,17 @@ const MyMapComponent = withScriptjs(withGoogleMap(({ privateParking, isMarkerSho
                 ? Object.keys(privateParking).map(key => {
                     const { latitude: lat, longitude: lng } = privateParking[key];
                     return <Marker position={{ lat: parseInt(lat), lng: parseInt(lng) }} key={key} />
+                })
+                : null
+            }
+
+            {isMarkerShown
+                ? Object.keys(streetParking).map(key => {
+                    const { latitude1, longitude1, latitude2, longitude2 } = streetParking[key];
+                    const lat = (parseFloat(latitude1) + parseFloat(latitude2)) / 2;
+                    const lng = (parseFloat(longitude1) + parseFloat(longitude2)) / 2;
+
+                    return <Marker position={{ lat, lng }} key={key} />
                 })
                 : null
             }
@@ -26,6 +37,7 @@ class Maps extends Component {
 
         this.state = {
             privateParking: {},
+            streetParking: {},
         }
 
         config.syncState('privateParking', {
@@ -33,14 +45,22 @@ class Maps extends Component {
             state: 'privateParking',
             asArray: false
         });
+
+
+        config.syncState('streetParking', {
+            context: this,
+            state: 'streetParking',
+            asArray: false
+        });
     }
 
     render() {
-        const { privateParking } = this.state;
+        const { privateParking, streetParking } = this.state;
 
         return (
             <MyMapComponent
                 privateParking={privateParking}
+                streetParking={streetParking}
                 isMarkerShown
                 googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: `100%` }} />}
